@@ -8,9 +8,6 @@ phases:
     commands:
       - echo checking the python version installed
       - python3 --version
-      - echo installing python pip3
-      - sudo su
-      - sudo yum install python3-pip
       - echo installing cfn-lint
       - pip3 install cfn-lint
       - echo checking the cfn-lint version installed
