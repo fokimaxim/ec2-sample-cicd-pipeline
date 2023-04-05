@@ -1,0 +1,14 @@
+# check python version
+python3 --version
+
+# install cfn-lint tool for testing cloudformation
+pip3 install cfn-lint
+
+# if pip not recognized, run commands
+# sudo yum install python3-pip
+
+# test the template by running
+cfn-lint ec2-cicd-pipeline.yaml
+
+# manually build cfn template
+aws cloudformation package --template-file ec2-cicd-pipeline.yaml --s3-bucket max-cicd-artifact-bucket --output-template-file outputTemplate.yaml 
